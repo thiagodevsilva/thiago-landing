@@ -35,7 +35,9 @@
         </p>
 
         <ul class="grid md:grid-cols-2 gap-4 text-slate-700">
+          <li>• Criação de Sites, Landing Pages e API's do ZERO</li>
           <li>• Manutenção e correção de sistemas Laravel e PHP 5+</li>
+          <li>• Manutenção e correção de sistemas NestJS</li>
           <li>• Evolução de funcionalidades em produção</li>
           <li>• Integração de gateways de pagamento</li>
           <li>• Correção de bugs críticos</li>
@@ -98,7 +100,90 @@
           </div>
         </div>
       </div>
+    </section>    
+
+    <!-- EVOLUTION API -->
+    <section class="py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">Evolution API Especialist</h2>
+
+        <p class="text-slate-600 mb-8 max-w-3xl">
+          Implemento e mantenho integrações robustas com a Evolution API para WhatsApp, com foco em
+          estabilidade, escalabilidade e suporte a múltiplas instâncias. Ideal para quem opera chatbots, N8N,
+          atendimento e automações e precisa de um ambiente confiável em produção.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 text-slate-700">
+          <div class="bg-white rounded-xl p-6 border border-slate-200">
+            <h3 class="font-semibold mb-3">O que eu espero sempre entregar:</h3>
+            <ul class="space-y-2">
+              <li>• Provisionamento e gerenciamento de instâncias (multi-tenant)</li>
+              <li>• Integração completa com webhooks e eventos (mensagens, status, sessões)</li>
+              <li>• Envio para contatos e grupos com fila, retries e controle de erros</li>
+              <li>• Rotinas de reconexão, health-check e monitoramento</li>
+              <li>• Painel simples para o cliente operar (instância, configurações, envio)</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 border border-slate-200">
+            <h3 class="font-semibold mb-3">Como eu garanto estabilidade:</h3>
+            <ul class="space-y-2">
+              <li>• Filas e processamento assíncrono (ex.: RabbitMQ/Redis)</li>
+              <li>• Observabilidade: logs estruturados e rastreio de falhas</li>
+              <li>• Rate limit e proteção contra spam/bloqueios</li>
+              <li>• Isolamento por cliente (tokens, limites e permissões)</li>
+              <li>• Deploy com Docker e boas práticas de infra em Linux/AWS</li>
+            </ul>
+          </div>
+        </div>        
+
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a
+            href="https://wa.me/5512997675736"
+            target="_blank"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition"
+          >
+            Quero falar sobre Evolution API
+          </a>
+
+          <a
+            href="mailto:contato@thiagosilva.dev.br"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-300 text-slate-800 font-medium hover:bg-slate-50 transition"
+          >
+            Enviar detalhes do projeto
+          </a>
+        </div>
+      </div>
     </section>
+
+    <!-- PLUS: PROVA SOCIAL / VERIFICAÇÃO -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-6">Perfil profissional</h2>
+
+        <p class="text-slate-600 mb-10 max-w-3xl">
+          Para validar histórico, experiências e recomendações, meu perfil profissional está disponível no LinkedIn.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-900 text-white font-medium hover:bg-slate-800 transition"
+            href="https://www.linkedin.com/in/thiago-silva-a88a61219/"
+            target="_blank"
+            rel="noopener"
+          >
+            Ver LinkedIn
+          </a>
+
+          <a
+            class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-300 text-slate-800 font-medium hover:bg-slate-50 transition"
+            href="mailto:contato@thiagosilva.dev.br"
+          >
+            Enviar e-mail
+          </a>
+        </div>
+      </div>
+    </section>    
 
     <!-- CTA FINAL -->
     <section class="py-20 text-center">
