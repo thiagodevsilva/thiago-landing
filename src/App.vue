@@ -3,7 +3,7 @@
     <!-- HERO -->
     <section class="max-w-5xl mx-auto px-6 py-20">
       <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-        Desenvolvedor PHP/Laravel/Nest Sênior<br />
+        Desenvolvedor Web Full Stack <br />
         <span class="text-indigo-600">
           Manutenção e evolução de sistemas
         </span>
@@ -76,12 +76,12 @@
         <div class="grid md:grid-cols-3 gap-8 text-slate-700">
           <div>
             <h3 class="font-semibold mb-2">Backend</h3>
-            <p>PHP, Laravel, NestJS</p>
+            <p>PHP / Laravel, Node / NestJS</p>
           </div>
 
           <div>
             <h3 class="font-semibold mb-2">Frontend</h3>
-            <p>Vue 2, Vue 3, Tailwind, DaisyUI</p>
+            <p>Javascript, Vue 2, Vue 3, Tailwind, DaisyUI, Blade, Twig</p>
           </div>
 
           <div>
@@ -96,7 +96,7 @@
 
           <div>
             <h3 class="font-semibold mb-2">Outros</h3>
-            <p>Gateways de pagamento, Filas, Mapas (Leaflet)</p>
+            <p>Gateways de pagamento, Api Evolution, Filas, Mapas</p>
           </div>
         </div>
       </div>
