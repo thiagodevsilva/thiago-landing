@@ -177,7 +177,7 @@
 
           <a
             class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-800 text-white font-medium hover:bg-slate-700 transition"
-            href="https://github.com/SEU_USUARIO"
+            href="https://github.com/thiagodevsilva"
             target="_blank"
             rel="noopener"
           >
