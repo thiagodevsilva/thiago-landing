@@ -176,6 +176,15 @@
           </a>
 
           <a
+            class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-800 text-white font-medium hover:bg-slate-700 transition"
+            href="https://github.com/SEU_USUARIO"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub
+          </a>
+
+          <a
             class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-300 text-slate-800 font-medium hover:bg-slate-50 transition"
             href="mailto:contato@thiagosilva.dev.br"
           >
