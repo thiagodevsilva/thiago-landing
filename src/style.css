@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Garante que os checkboxes DaisyUI não sejam sobrescritos pelo preflight do Tailwind */
+@layer base {
+  input[type="checkbox"].checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+}
+
+/* Garante que botões outline tenham visual de botão (borda visível), não de link */
+@layer components {
+  .btn.btn-outline {
+    border-width: 2px;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  .btn.btn-outline.btn-sm {
+    padding: 0.375rem 0.75rem;
+  }
+  .btn.btn-outline.btn-xs {
+    padding: 0.25rem 0.5rem;
+  }
+  .btn.btn-outline:hover {
+    background-color: oklch(0.97 0.005 260);
+  }
+  .btn.btn-outline.btn-primary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+  .btn.btn-outline.btn-primary:hover {
+    background-color: color-mix(in oklch, var(--color-primary) 15%, transparent);
+  }
+  .btn.btn-outline.btn-error {
+    border-color: var(--color-error);
+    color: var(--color-error);
+  }
+  .btn.btn-outline.btn-error:hover {
+    background-color: color-mix(in oklch, var(--color-error) 15%, transparent);
+  }
+  .btn.btn-outline:not(.btn-primary):not(.btn-error) {
+    border-color: oklch(0.6 0.02 260);
+    color: oklch(0.35 0.02 260);
+  }
+
+  /* Checkbox padrão preto e branco: borda/fundo visível desmarcado, setinha preta marcado */
+  .checkbox.checkbox-basico {
+    --input-color: oklch(0.85 0.02 260);
+    color: #111;
+    border-width: 1.5px;
+    border-color: oklch(0.55 0.02 260);
+    background-color: oklch(0.97 0.005 260);
+  }
+  .checkbox.checkbox-basico:checked,
+  .checkbox.checkbox-basico[aria-checked="true"] {
+    background-color: oklch(0.92 0.01 260);
+    border-color: oklch(0.5 0.02 260);
+    color: #111;
+  }
+}
