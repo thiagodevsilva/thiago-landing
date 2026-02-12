@@ -76,6 +76,47 @@
       </div>
     </section>
 
+    <!-- PORTFÓLIO -->
+    <section class="bg-white py-20">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-2">Portfólio</h2>
+        <p class="text-slate-600 mb-10 max-w-3xl">
+          Projetos que desenvolvi para demonstrar soluções reais.
+        </p>
+
+        <a
+          href="https://landing-food.thiagosilva.dev.br/"
+          target="_blank"
+          rel="noopener"
+          class="block group"
+        >
+          <article class="rounded-xl border border-slate-200 overflow-hidden bg-slate-50 hover:border-indigo-300 hover:shadow-lg transition-all duration-300">
+            <div class="p-6 md:p-8">
+              <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-800 group-hover:text-indigo-600 transition-colors">
+                    Landing Food
+                  </h3>
+                  <p class="text-slate-600 mt-2">
+                    Mais clientes no seu restaurante
+                  </p>
+                  <p class="text-slate-500 text-sm mt-3 max-w-2xl">
+                    Landing page para donos de restaurante. Estratégias que fazem pizzarias, hamburguerias e delivery venderem mais — com diagnóstico gratuito e formulário de captação.
+                  </p>
+                </div>
+                <span class="inline-flex items-center gap-2 text-indigo-600 font-medium shrink-0">
+                  Visitar site
+                  <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </article>
+        </a>
+      </div>
+    </section>
+
     <!-- STACK -->
     <section class="bg-white py-20">
       <div class="max-w-5xl mx-auto px-6">
