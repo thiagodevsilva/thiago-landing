@@ -1,0 +1,6 @@
+services:
+  landing:
+    build: .
+    container_name: thiago-landing-local
+    ports:
+      - "8088:80"
