@@ -1,14 +1,17 @@
 <template>
-  <main class="min-h-screen bg-slate-100 text-slate-800">
+  <main class="min-h-screen bg-base text-ink">
     <!-- Hero do catálogo -->
-    <section class="bg-white border-b border-slate-200">
-      <div class="max-w-5xl mx-auto px-6 py-12">
-        <h1 class="text-3xl md:text-4xl font-bold text-slate-900">
-          Catálogo de padrões
+    <section class="border-b border-slate-200 bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-12 lg:px-8">
+        <p class="text-sm font-semibold uppercase tracking-widest text-accent">
+          Catálogo
+        </p>
+        <h1 class="mt-2 font-display text-3xl font-bold text-ink md:text-4xl">
+          Padrões que entregamos
         </h1>
-        <p class="mt-3 text-slate-600 max-w-2xl">
-          Showroom dos fluxos e componentes que uso em projetos reais. Cada bloco pode ser
-          reaproveitado no seu projeto: CRUD, dashboards, uploads, formulários e mais.
+        <p class="mt-3 max-w-2xl text-ink-muted">
+          Showroom dos fluxos e componentes que a DevSilva reutiliza em projetos reais.
+          Cada bloco pode entrar no seu produto: CRUD, dashboards, uploads, formulários e mais.
         </p>
       </div>
     </section>
@@ -17,16 +20,16 @@
     <section
       v-if="selectedItem"
       ref="demoSectionRef"
-      class="border-b border-slate-200 bg-slate-50 py-8"
+      class="border-b border-slate-200 bg-base py-8"
     >
-      <div class="max-w-5xl mx-auto px-6">
-        <div class="flex items-center justify-between mb-4">
-          <h2 class="text-xl font-semibold text-slate-800">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <div class="mb-4 flex items-center justify-between">
+          <h2 class="font-display text-xl font-semibold text-ink">
             Demo: {{ selectedItem.title }}
           </h2>
           <button
             type="button"
-            class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 transition"
+            class="rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-ink-muted transition hover:bg-white"
             @click="closeDemo"
           >
             Fechar demo
@@ -43,21 +46,21 @@
     </section>
 
     <!-- Grid de categorias -->
-    <section class="max-w-5xl mx-auto px-6 py-10">
+    <section class="mx-auto max-w-6xl px-6 py-10 lg:px-8">
       <div class="space-y-10">
         <article
           v-for="category in catalogCategories"
           :key="category.id"
-          class="rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm"
+          class="overflow-hidden rounded-xl border border-slate-200 bg-white"
         >
-          <div class="p-5 md:p-6 border-b border-slate-100 bg-slate-50/50">
+          <div class="border-b border-slate-100 bg-base/50 p-5 md:p-6">
             <div class="flex items-start gap-3">
               <span class="text-2xl" aria-hidden="true">{{ category.icon }}</span>
               <div>
-                <h2 class="text-xl font-bold text-slate-900">
+                <h2 class="font-display text-xl font-bold text-ink">
                   {{ category.title }}
                 </h2>
-                <p class="mt-1 text-sm text-slate-600">
+                <p class="mt-1 text-sm text-ink-muted">
                   {{ category.description }}
                 </p>
               </div>
@@ -67,33 +70,33 @@
             <li
               v-for="item in category.items"
               :key="item.id"
-              class="p-5 md:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+              class="flex flex-col gap-3 p-5 sm:flex-row sm:items-center sm:justify-between md:p-6"
             >
               <div>
-                <h3 class="font-semibold text-slate-800">{{ item.title }}</h3>
-                <p class="mt-1 text-sm text-slate-600">{{ item.description }}</p>
+                <h3 class="font-semibold text-ink">{{ item.title }}</h3>
+                <p class="mt-1 text-sm text-ink-muted">{{ item.description }}</p>
                 <div class="mt-2 flex flex-wrap gap-1.5">
                   <span
                     v-for="tag in item.tags"
                     :key="tag"
-                    class="inline-block rounded bg-slate-100 px-2 py-0.5 text-xs text-slate-600"
+                    class="inline-block rounded bg-base px-2 py-0.5 text-xs text-ink-muted"
                   >
                     {{ tag }}
                   </span>
                 </div>
               </div>
-              <div class="flex items-center gap-2 shrink-0">
+              <div class="flex shrink-0 items-center gap-2">
                 <button
                   v-if="item.demoComponent"
                   type="button"
-                  class="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 transition hover:bg-indigo-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  class="rounded-lg bg-accent px-4 py-2 text-sm font-medium text-white transition hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
                   @click.prevent="openDemo(category.id, item)"
                 >
                   Ver demo
                 </button>
                 <span
                   v-else
-                  class="rounded-lg bg-slate-100 px-4 py-2 text-sm text-slate-500"
+                  class="rounded-lg bg-base px-4 py-2 text-sm text-ink-muted"
                 >
                   Em breve
                 </span>
@@ -104,17 +107,17 @@
       </div>
     </section>
 
-    <!-- CTA para contratar -->
+    <!-- CTA -->
     <section class="border-t border-slate-200 bg-white py-12">
-      <div class="max-w-5xl mx-auto px-6 text-center">
-        <p class="text-slate-600 mb-4">
+      <div class="mx-auto max-w-6xl px-6 text-center lg:px-8">
+        <p class="mb-4 text-ink-muted">
           Quer um desses padrões (ou vários) no seu projeto?
         </p>
         <a
           href="https://wa.me/5512997675736"
           target="_blank"
-          rel="noopener"
-          class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-semibold text-white transition hover:bg-accent-hover"
         >
           Falar no WhatsApp
         </a>

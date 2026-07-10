@@ -2,15 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Garante que os checkboxes DaisyUI não sejam sobrescritos pelo preflight do Tailwind */
+:root {
+  --color-base: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-ink: #0b1f33;
+  --color-ink-muted: #4a5d6e;
+  --color-accent: #0f766e;
+  --color-accent-hover: #0d9488;
+  --color-accent-soft: #ccfbf1;
+  --font-display: "Syne", system-ui, sans-serif;
+  --font-body: "Manrope", system-ui, sans-serif;
+}
+
 @layer base {
+  html {
+    font-family: var(--font-body);
+    color: var(--color-ink);
+    background-color: var(--color-base);
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display);
+  }
+
   input[type="checkbox"].checkbox {
     appearance: none;
     -webkit-appearance: none;
   }
 }
 
-/* Garante que botões outline tenham visual de botão (borda visível), não de link */
 @layer components {
   .btn.btn-outline {
     border-width: 2px;
@@ -46,7 +69,6 @@
     color: oklch(0.35 0.02 260);
   }
 
-  /* Checkbox padrão preto e branco: borda/fundo visível desmarcado, setinha preta marcado */
   .checkbox.checkbox-basico {
     --input-color: oklch(0.85 0.02 260);
     color: #111;
@@ -59,5 +81,41 @@
     background-color: oklch(0.92 0.01 260);
     border-color: oklch(0.5 0.02 260);
     color: #111;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(1.25rem);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hero-enter {
+    animation: hero-enter 0.85s ease both;
+  }
+
+  .hero-enter-delay {
+    animation: hero-enter 0.85s ease 0.15s both;
+  }
+
+  .hero-enter-delay-2 {
+    animation: hero-enter 0.85s ease 0.3s both;
+  }
+}
+
+@keyframes hero-enter {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

@@ -1,297 +1,335 @@
 <template>
-  <main class="min-h-screen bg-slate-200 text-slate-800">
+  <main class="min-h-screen bg-base text-ink">
     <!-- HERO -->
     <section
-      class="relative min-h-[92vh] overflow-hidden border-b border-white/10 text-white"
+      class="relative min-h-[92vh] overflow-hidden text-white"
       aria-label="Apresentação"
     >
-      <!-- Camada 1: gradiente base -->
       <div
-        class="absolute inset-0 bg-gradient-to-br from-[#020617] via-[#0B1026] to-[#26135B]"
+        class="absolute inset-0 bg-gradient-to-br from-ink via-[#122a40] to-[#0a3d38]"
         aria-hidden="true"
       />
-      <!-- Camada 2: glows -->
-      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div
-          class="absolute -left-24 top-[22%] h-[34rem] w-[34rem] rounded-full bg-indigo-500/35 blur-3xl"
-        />
-        <div
-          class="absolute -right-24 -bottom-10 h-[34rem] w-[34rem] rounded-full bg-violet-500/40 blur-3xl"
-        />
-        <div
-          class="absolute right-[18%] top-[8%] h-72 w-72 rounded-full bg-cyan-400/35 blur-3xl"
-        />
-        <div
-          class="absolute right-[30%] bottom-[16%] h-64 w-64 rounded-full bg-fuchsia-500/30 blur-3xl"
-        />
-      </div>
+      <div
+        class="pointer-events-none absolute inset-0 opacity-[0.12]"
+        aria-hidden="true"
+        style="
+          background-image:
+            linear-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.35) 1px, transparent 1px);
+          background-size: 48px 48px;
+        "
+      />
+      <div
+        class="pointer-events-none absolute -right-20 top-1/4 h-[28rem] w-[28rem] rounded-full bg-accent/25 blur-3xl"
+        aria-hidden="true"
+      />
 
       <div
-        class="relative z-10 mx-auto flex min-h-[92vh] max-w-7xl flex-col px-6 pb-14 pt-10 lg:px-16 lg:pb-16 lg:pt-14"
+        class="relative z-10 mx-auto grid min-h-[92vh] max-w-6xl grid-cols-1 items-center gap-12 px-6 py-16 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-20"
       >
-        <div
-          class="grid flex-1 grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12 xl:gap-16"
-        >
-          <div class="order-1 max-w-xl lg:order-1">
-            <h1 class="font-extrabold leading-[0.95] tracking-tight">
-              <span class="block text-4xl sm:text-5xl lg:text-6xl">
-                Desenvolvedor Web Full Stack
-              </span>
-              <span
-                class="mt-3 block bg-gradient-to-r from-[#6366F1] to-[#22D3EE] bg-clip-text text-3xl text-transparent sm:text-4xl lg:text-5xl"
-              >
-                Do zero ao que já está no ar
-              </span>
-            </h1>
-
-            <p class="mt-8 text-lg leading-relaxed text-slate-200 lg:mt-10 lg:text-xl">
-              Crio sites, APIs e integrações do zero e também mantenho e evoluo sistemas em produção — Laravel, PHP e NestJS.
-            </p>
-
-            <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
-              <a
-                href="https://wa.me/5512997675736"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center justify-center rounded-xl bg-[#5B4BFF] px-8 py-4 text-center text-base font-semibold text-white shadow-[0_0_24px_rgba(91,75,255,0.35)] transition hover:bg-[#6A5CFF]"
-              >
-                Falar comigo no WhatsApp
-              </a>
-              <RouterLink
-                to="/portfolio"
-                class="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-center text-base font-medium text-slate-900 transition hover:bg-slate-100"
-              >
-                Ver portfólio
-              </RouterLink>
-            </div>
-          </div>
-
-          <div
-            class="order-2 flex justify-center overflow-visible lg:order-2 lg:justify-end lg:self-start lg:pt-12"
+        <div class="max-w-xl">
+          <p class="hero-enter font-display text-5xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
+            DevSilva
+          </p>
+          <h1
+            class="hero-enter-delay mt-5 font-display text-2xl font-bold leading-snug tracking-tight text-white sm:text-3xl lg:text-4xl"
           >
-            <img
-              src="/dev-2.png"
-              alt="Ilustração de desenvolvedor com elementos de código e interface"
-              width="1200"
-              height="900"
-              class="h-auto w-full max-w-2xl scale-110 object-contain md:max-w-3xl md:scale-[1.2] lg:max-w-none lg:translate-y-12 lg:translate-x-20 lg:scale-[1.32] lg:w-[min(100%,64rem)] xl:translate-y-14 xl:translate-x-24 xl:w-[min(100%,70rem)]"
-              loading="eager"
-              decoding="async"
-            />
+            Sites, LP's e Sistemas Web sob medida
+          </h1>
+          <p class="hero-enter-delay-2 mt-6 text-lg leading-relaxed text-white/80">
+            Software house que cria e mantém sistemas em produção — Laravel, Vue, PHP e NestJS, com integrações de pagamento e WhatsApp.
+          </p>
+          <div class="hero-enter-delay-2 mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <a
+              href="https://wa.me/5512997675736"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center rounded-lg bg-accent px-8 py-4 text-center text-base font-semibold text-white transition hover:bg-accent-hover"
+            >
+              Falar no WhatsApp
+            </a>
+            <RouterLink
+              to="/portfolio"
+              class="inline-flex items-center justify-center rounded-lg border border-white/30 bg-white/5 px-8 py-4 text-center text-base font-medium text-white transition hover:bg-white/10"
+            >
+              Ver cases
+            </RouterLink>
+          </div>
+        </div>
+
+        <!-- Silhueta de painel / produto -->
+        <div
+          class="hero-enter-delay-2 relative mx-auto hidden w-full max-w-md lg:block"
+          aria-hidden="true"
+        >
+          <div
+            class="rounded-2xl border border-white/15 bg-white/5 p-5 shadow-2xl backdrop-blur-sm"
+          >
+            <div class="mb-4 flex items-center gap-2">
+              <span class="h-2.5 w-2.5 rounded-full bg-white/30" />
+              <span class="h-2.5 w-2.5 rounded-full bg-white/30" />
+              <span class="h-2.5 w-2.5 rounded-full bg-accent/80" />
+            </div>
+            <div class="space-y-3">
+              <div class="h-3 w-2/5 rounded bg-white/20" />
+              <div class="grid grid-cols-3 gap-3">
+                <div class="h-20 rounded-lg bg-accent/30" />
+                <div class="h-20 rounded-lg bg-white/10" />
+                <div class="h-20 rounded-lg bg-white/10" />
+              </div>
+              <div class="h-3 w-full rounded bg-white/10" />
+              <div class="h-3 w-4/5 rounded bg-white/10" />
+              <div class="mt-2 grid grid-cols-2 gap-3">
+                <div class="h-14 rounded-lg border border-white/10 bg-white/5" />
+                <div class="h-14 rounded-lg border border-white/10 bg-white/5" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- O QUE EU FAÇO -->
-    <section class="bg-white py-20">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6">O que faço</h2>
-
-        <p class="text-slate-600 mb-8 max-w-2xl">
-          Projeto novo ou sistema que já roda: desenvolvimento, correção e evolução com foco em resultado e pouca fricção no seu time.
+    <!-- SERVIÇOS -->
+    <section ref="servicesRef" class="reveal bg-white py-20 md:py-24" aria-labelledby="servicos-title">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <h2 id="servicos-title" class="font-display text-3xl font-bold tracking-tight md:text-4xl">
+          O que entregamos
+        </h2>
+        <p class="mt-4 max-w-2xl text-lg text-ink-muted">
+          Do zero à manutenção contínua: produtos digitais pensados para operar no dia a dia do seu negócio.
         </p>
-
-        <ul class="grid md:grid-cols-2 gap-4 text-slate-700">
-          <li>• Sites, landings e APIs do zero</li>
-          <li>• Laravel, PHP (incl. legado) e NestJS — manutenção e novas features</li>
-          <li>• Pagamentos, integrações e APIs de terceiros</li>
-          <li>• Bugs críticos, performance e ajustes em produção</li>
-          <li>• Suporte pontual ou recorrente</li>
-          <li>• Consultoria técnica quando precisar de direção</li>
+        <ul class="mt-12 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+          <li v-for="service in services" :key="service.title">
+            <h3 class="font-display text-lg font-semibold text-ink">
+              {{ service.title }}
+            </h3>
+            <p class="mt-2 text-ink-muted leading-relaxed">
+              {{ service.description }}
+            </p>
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- EXPERIÊNCIA -->
-    <section class="py-20">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6">Na prática</h2>
-
-        <p class="text-slate-600 max-w-2xl">
-          Produtos novos e sistemas que já vivem em produção — integrações, dados e operação no dia a dia.
+    <!-- INTEGRAÇÕES -->
+    <section ref="integrationsRef" class="reveal py-20 md:py-24" aria-labelledby="integracoes-title">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <h2 id="integracoes-title" class="font-display text-3xl font-bold tracking-tight md:text-4xl">
+          Integrações
+        </h2>
+        <p class="mt-4 max-w-2xl text-lg text-ink-muted">
+          Pagamentos, WhatsApp e APIs de terceiros conectados ao seu sistema — com filas, webhooks e operação estável.
         </p>
-
-        <ul class="mt-6 space-y-2 text-slate-700">
-          <li>• SaaS e painéis administrativos</li>
-          <li>• Volume de dados, filas e integrações</li>
-          <li>• Ambientes críticos e código legado</li>
+        <ul class="mt-10 flex flex-wrap gap-x-8 gap-y-4 text-lg font-medium text-ink">
+          <li v-for="item in integrations" :key="item" class="flex items-center gap-2">
+            <span class="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+            {{ item }}
+          </li>
         </ul>
       </div>
     </section>
 
-    <!-- PORTFÓLIO (CTA) -->
-    <section class="bg-white py-20">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-2">Portfólio</h2>
-        <p class="text-slate-600 mb-8 max-w-xl">
-          Projetos reais e laboratório — um lugar só.
+    <!-- STACK -->
+    <section ref="stackRef" class="reveal border-y border-slate-200/80 bg-white py-20 md:py-24" aria-labelledby="stack-title">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <h2 id="stack-title" class="font-display text-3xl font-bold tracking-tight md:text-4xl">
+          Stack
+        </h2>
+        <p class="mt-4 max-w-2xl text-lg text-ink-muted">
+          Tecnologias que usamos para construir e evoluir produtos em produção.
+        </p>
+        <div class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div v-for="group in stack" :key="group.title">
+            <h3 class="font-display text-sm font-semibold uppercase tracking-wider text-accent">
+              {{ group.title }}
+            </h3>
+            <p class="mt-2 text-ink leading-relaxed">
+              {{ group.items }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASES -->
+    <section ref="casesRef" class="reveal py-20 md:py-24" aria-labelledby="cases-title">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <h2 id="cases-title" class="font-display text-3xl font-bold tracking-tight md:text-4xl">
+          Cases
+        </h2>
+        <p class="mt-4 max-w-xl text-lg text-ink-muted">
+          Projetos em produção e demonstrações da casa.
         </p>
         <RouterLink
           to="/portfolio"
-          class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-8 py-4 font-medium text-white transition hover:bg-indigo-700"
+          class="mt-8 inline-flex items-center gap-2 rounded-lg bg-ink px-8 py-4 font-semibold text-white transition hover:bg-ink/90"
         >
-          Ver portfólio completo
-          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
-            />
+          Ver projetos
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
         </RouterLink>
       </div>
     </section>
 
-    <!-- STACK -->
-    <section class="bg-white py-20">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-10">Tecnologias</h2>
-
-        <div class="grid md:grid-cols-3 gap-8 text-slate-700">
-          <div>
-            <h3 class="font-semibold mb-2">Backend</h3>
-            <p>PHP / Laravel, Node / NestJS</p>
-          </div>
-
-          <div>
-            <h3 class="font-semibold mb-2">Frontend</h3>
-            <p>Javascript, Vue 2, Vue 3, Tailwind, DaisyUI, Blade, Twig</p>
-          </div>
-
-          <div>
-            <h3 class="font-semibold mb-2">Banco de dados</h3>
-            <p>PostgreSQL, MySQL</p>
-          </div>
-
-          <div>
-            <h3 class="font-semibold mb-2">Infraestrutura</h3>
-            <p>AWS, VPS Linux, Docker</p>
-          </div>
-
-          <div>
-            <h3 class="font-semibold mb-2">Outros</h3>
-            <p>Gateways de pagamento, Api Evolution, Filas, Mapas</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EVOLUTION API -->
-    <section class="py-20">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6">Evolution API</h2>
-
-        <p class="text-slate-600 mb-8 max-w-2xl">
-          WhatsApp em produção: instâncias, webhooks, filas e monitoramento — para automação, N8N e atendimento.
+    <!-- CATÁLOGO -->
+    <section ref="catalogRef" class="reveal bg-white py-20 md:py-24" aria-labelledby="catalogo-title">
+      <div class="mx-auto max-w-6xl px-6 lg:px-8">
+        <h2 id="catalogo-title" class="font-display text-3xl font-bold tracking-tight md:text-4xl">
+          Padrões
+        </h2>
+        <p class="mt-4 max-w-xl text-lg text-ink-muted">
+          Showroom de fluxos e componentes que reutilizamos em CRMs, painéis e sites.
         </p>
-
-        <div class="grid md:grid-cols-2 gap-8 text-slate-700">
-          <div class="bg-white rounded-xl p-6 border border-slate-200">
-            <h3 class="font-semibold mb-3">Entrega</h3>
-            <ul class="space-y-2">
-              <li>• Multi-instância e webhooks/eventos</li>
-              <li>• Envio com fila, retry e tratamento de erro</li>
-              <li>• Reconexão, health-check e operação simples</li>
-            </ul>
-          </div>
-
-          <div class="bg-white rounded-xl p-6 border border-slate-200">
-            <h3 class="font-semibold mb-3">Estabilidade</h3>
-            <ul class="space-y-2">
-              <li>• Filas (ex.: Redis/RabbitMQ)</li>
-              <li>• Logs, rate limit e isolamento por cliente</li>
-              <li>• Docker, Linux/AWS</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="mt-10 flex flex-col sm:flex-row gap-4">
-          <a
-            href="https://wa.me/5512997675736"
-            target="_blank"
-            class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-indigo-600 text-white font-medium hover:bg-indigo-700 transition"
-          >
-            Quero falar sobre Evolution API
-          </a>
-
-          <a
-            href="mailto:contato@thiagosilva.dev.br"
-            class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-300 text-slate-800 font-medium hover:bg-slate-50 transition"
-          >
-            Enviar detalhes do projeto
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- PLUS: PROVA SOCIAL / VERIFICAÇÃO -->
-    <section class="py-20 bg-white">
-      <div class="max-w-5xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-6">Onde me ver</h2>
-
-        <p class="text-slate-600 mb-10 max-w-xl">
-          LinkedIn para trajetória e recomendações; GitHub para código.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a
-            class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-900 text-white font-medium hover:bg-slate-800 transition"
-            href="https://www.linkedin.com/in/thiago-silva-a88a61219/"
-            target="_blank"
-            rel="noopener"
-          >
-            Ver LinkedIn
-          </a>
-
-          <a
-            class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-slate-800 text-white font-medium hover:bg-slate-700 transition"
-            href="https://github.com/thiagodevsilva"
-            target="_blank"
-            rel="noopener"
-          >
-            GitHub
-          </a>
-
-          <a
-            class="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-slate-300 text-slate-800 font-medium hover:bg-slate-50 transition"
-            href="mailto:contato@thiagosilva.dev.br"
-          >
-            Enviar e-mail
-          </a>
-        </div>
+        <RouterLink
+          to="/catalogo"
+          class="mt-8 inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-base px-8 py-4 font-semibold text-ink transition hover:border-accent hover:text-accent"
+        >
+          Abrir catálogo
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </RouterLink>
       </div>
     </section>
 
     <!-- CTA FINAL -->
-    <section class="py-20 text-center">
-      <h2 class="text-3xl font-bold mb-4 max-w-2xl mx-auto">
-        Ideia nova, produto no ar ou bug apertando?
-      </h2>
-
-      <p class="text-slate-600 mb-8">
-        Chama no WhatsApp e a gente vê o melhor caminho.
-      </p>
-
-      <a
-        href="https://wa.me/5512997675736"
-        target="_blank"
-        class="inline-block px-8 py-4 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
-      >
-        Falar comigo
-      </a>
+    <section class="border-t border-slate-200/80 py-20 md:py-24" aria-labelledby="cta-title">
+      <div class="mx-auto max-w-6xl px-6 text-center lg:px-8">
+        <h2 id="cta-title" class="font-display text-3xl font-bold tracking-tight md:text-4xl">
+          Projeto novo ou sistema para manter?
+        </h2>
+        <p class="mx-auto mt-4 max-w-lg text-lg text-ink-muted">
+          Conte o cenário no WhatsApp — a gente avalia o melhor caminho.
+        </p>
+        <a
+          href="https://wa.me/5512997675736"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-flex items-center justify-center rounded-lg bg-accent px-8 py-4 font-semibold text-white transition hover:bg-accent-hover"
+        >
+          Solicitar conversa
+        </a>
+      </div>
     </section>
 
-    <!-- RODAPÉ -->
+    <!-- FOOTER -->
     <footer class="border-t border-slate-200 bg-white">
-      <div class="max-w-5xl mx-auto px-6 py-8 text-center text-sm text-slate-500">
-        &copy; {{ currentYear }} Thiago Silva. Todos os direitos reservados.
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-10 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <div>
+          <p class="font-display text-lg font-bold text-ink">DevSilva</p>
+          <p class="mt-1 text-sm text-ink-muted">
+            © {{ currentYear }} DevSilva · Thiago Silva
+          </p>
+        </div>
+        <div class="flex flex-wrap gap-4 text-sm">
+          <a
+            href="mailto:contato@thiagosilva.dev.br"
+            class="text-ink-muted transition hover:text-accent"
+          >
+            contato@thiagosilva.dev.br
+          </a>
+          <a
+            href="https://wa.me/5512997675736"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-ink-muted transition hover:text-accent"
+          >
+            WhatsApp
+          </a>
+          <a
+            href="https://www.linkedin.com/in/thiago-silva-a88a61219/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-ink-muted transition hover:text-accent"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
     </footer>
   </main>
 </template>
 
 <script setup>
+import { onMounted, onUnmounted, ref } from 'vue'
+
 const currentYear = new Date().getFullYear()
+
+const services = [
+  {
+    title: 'CRM',
+    description: 'Gestão de leads, funis e operação comercial sob medida para o seu processo.',
+  },
+  {
+    title: 'CMS',
+    description: 'Painéis e conteúdo editável para times que precisam publicar sem depender de deploy.',
+  },
+  {
+    title: 'Sites e LPs',
+    description: 'Presença digital e landing pages focadas em conversão e identidade da marca.',
+  },
+  {
+    title: 'Manutenção',
+    description: 'Evolução, correções e suporte em sistemas Laravel, PHP e NestJS já no ar.',
+  },
+  {
+    title: 'Integrações',
+    description: 'Pagamentos, WhatsApp, APIs e automações conectadas ao produto principal.',
+  },
+]
+
+const integrations = [
+  'Asaas',
+  'Mercado Pago',
+  'WhatsApp',
+  'Evolution API',
+  'APIs sob medida',
+]
+
+const stack = [
+  { title: 'Backend', items: 'PHP, Laravel, Node, NestJS' },
+  { title: 'Frontend', items: 'JavaScript, Vue 2, Vue 3, Tailwind, Blade' },
+  { title: 'Dados', items: 'PostgreSQL, MySQL' },
+  { title: 'Infra', items: 'AWS, VPS Linux, Docker' },
+  { title: 'Integrações', items: 'Gateways de pagamento, Evolution API, filas' },
+]
+
+const servicesRef = ref(null)
+const integrationsRef = ref(null)
+const stackRef = ref(null)
+const casesRef = ref(null)
+const catalogRef = ref(null)
+
+let observer
+
+onMounted(() => {
+  const targets = [
+    servicesRef.value,
+    integrationsRef.value,
+    stackRef.value,
+    casesRef.value,
+    catalogRef.value,
+  ].filter(Boolean)
+
+  observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        }
+      }
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' },
+  )
+
+  for (const el of targets) {
+    observer.observe(el)
+  }
+})
+
+onUnmounted(() => {
+  observer?.disconnect()
+})
 </script>
