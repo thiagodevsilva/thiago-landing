@@ -264,10 +264,10 @@
         </div>
         <div class="flex flex-wrap gap-4 text-sm">
           <a
-            href="mailto:contato@thiagosilva.dev.br"
+            href="mailto:thiagows72@gmail.com"
             class="text-ink-muted transition hover:text-accent"
           >
-            contato@thiagosilva.dev.br
+            thiagows72@gmail.com
           </a>
           <a
             href="https://wa.me/5512997675736"
