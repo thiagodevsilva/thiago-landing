@@ -160,6 +160,46 @@
         <p class="mt-4 max-w-xl text-lg text-ink-muted">
           Projetos em produção e demonstrações da casa.
         </p>
+
+        <div class="mt-10">
+          <p class="text-xs font-medium uppercase tracking-wider text-ink-muted/80">
+            Em destaque
+          </p>
+          <ul class="mt-4 space-y-5">
+            <li v-for="project in featuredProjects" :key="project.id">
+              <a
+                :href="project.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex max-w-md items-baseline gap-3 border-l-2 border-accent/40 py-1 pl-4 transition hover:border-accent"
+              >
+                <span class="min-w-0">
+                  <span class="block font-display text-lg font-semibold text-ink transition group-hover:text-accent">
+                    {{ project.title }}
+                  </span>
+                  <span class="mt-0.5 block text-sm text-ink-muted">
+                    {{ project.summary }}
+                  </span>
+                </span>
+                <svg
+                  class="mt-1.5 h-4 w-4 shrink-0 text-ink-muted/50 transition group-hover:translate-x-0.5 group-hover:text-accent"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
         <RouterLink
           to="/portfolio"
           class="mt-8 inline-flex items-center gap-2 rounded-lg bg-ink px-8 py-4 font-semibold text-white transition hover:bg-ink/90"
@@ -293,6 +333,27 @@ const stack = [
   { title: 'Dados', items: 'PostgreSQL, MySQL' },
   { title: 'Infra', items: 'AWS, VPS Linux, Docker' },
   { title: 'Integrações', items: 'Gateways de pagamento, Evolution API, filas' },
+]
+
+const featuredProjects = [
+  {
+    id: 'futebola',
+    title: 'Futebola',
+    summary: 'Tabela do Brasileirão em tempo real',
+    url: 'https://futebola.thiagosilva.dev.br/',
+  },
+  {
+    id: 'thaiscosta',
+    title: 'Thais Costa English',
+    summary: 'Presença online para ensino de inglês',
+    url: 'https://thaiscosta.site/',
+  },
+  {
+    id: 'crecido-app',
+    title: 'Crecido App',
+    summary: 'Aplicação web do ecossistema imobiliário',
+    url: 'https://crecido.app',
+  },
 ]
 
 const servicesRef = ref(null)

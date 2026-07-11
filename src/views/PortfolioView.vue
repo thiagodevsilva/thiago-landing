@@ -299,6 +299,18 @@ const labProjects = [
     ctaLabel: 'Abrir demo',
   },
   {
+    id: 'futebola',
+    title: 'Futebola',
+    summary:
+      'Acompanhe o Brasileirão em tempo real: tabela, classificação e zona de Libertadores, Sul-Americana e rebaixamento.',
+    url: 'https://futebola.thiagosilva.dev.br/',
+    domain: 'futebola.thiagosilva.dev.br',
+    gradient: 'from-emerald-600 to-green-900',
+    tags: ['Futebol', 'Brasileirão', 'Demo'],
+    internal: false,
+    ctaLabel: 'Abrir demo',
+  },
+  {
     id: 'catalogo',
     title: 'Catálogo de padrões',
     summary:
