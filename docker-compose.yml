@@ -4,3 +4,4 @@ services:
     container_name: thiago-landing-local
     ports:
       - "8088:80"
+    restart: unless-stopped
