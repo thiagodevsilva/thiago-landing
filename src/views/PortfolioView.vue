@@ -287,6 +287,30 @@ const realProjects = [
 
 const labProjects = [
   {
+    id: 'tws-engenharia',
+    title: 'TWS Engenharia',
+    summary:
+      'Landing institucional para engenharia, reformas e obras: credibilidade técnica e geração de leads.',
+    url: 'https://tws-engenharia.thiagosilva.dev.br/',
+    domain: 'tws-engenharia.thiagosilva.dev.br',
+    gradient: 'from-slate-700 to-ink',
+    tags: ['Landing', 'Vue', 'Demo'],
+    internal: false,
+    ctaLabel: 'Abrir demo',
+  },
+  {
+    id: 'agolar',
+    title: 'Agolar',
+    summary:
+      'Marketing imobiliário premium: vitrine de imóveis, qualificação de interesse e conversão via WhatsApp.',
+    url: 'https://agolar.thiagosilva.dev.br/',
+    domain: 'agolar.thiagosilva.dev.br',
+    gradient: 'from-emerald-700 to-ink',
+    tags: ['Imobiliário', 'Leads', 'Demo'],
+    internal: false,
+    ctaLabel: 'Abrir demo',
+  },
+  {
     id: 'landing-food',
     title: 'Landing Food',
     summary:
