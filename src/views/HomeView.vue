@@ -151,6 +151,9 @@
       </div>
     </section>
 
+    <!-- LEVITA -->
+    <LevitaPromo />
+
     <!-- CASES -->
     <section ref="casesRef" class="reveal py-20 md:py-24" aria-labelledby="cases-title">
       <div class="mx-auto max-w-6xl px-6 lg:px-8">
@@ -259,6 +262,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
 import CasesShowcase from '../components/CasesShowcase.vue'
+import LevitaPromo from '../components/LevitaPromo.vue'
 
 const currentYear = new Date().getFullYear()
 

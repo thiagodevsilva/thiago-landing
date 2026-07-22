@@ -287,6 +287,18 @@ const realProjects = [
 
 const labProjects = [
   {
+    id: 'levita',
+    title: 'Levita',
+    summary:
+      'App web de finanças da família: conta compartilhada, categorias, dashboard e relatórios.',
+    url: 'https://levita.thiagosilva.dev.br/',
+    domain: 'levita.thiagosilva.dev.br',
+    gradient: 'from-amber-400 to-blue-700',
+    tags: ['Laravel', 'Vue', 'Finanças'],
+    internal: false,
+    ctaLabel: 'Abrir app',
+  },
+  {
     id: 'tws-engenharia',
     title: 'TWS Engenharia',
     summary:
