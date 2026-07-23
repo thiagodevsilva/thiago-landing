@@ -5,12 +5,12 @@
         <div class="lv-bg" aria-hidden="true" />
 
         <div class="lv-content">
-          <p class="lv-badge">Novo · App de finanças</p>
+          <p class="lv-badge">App de finanças simples</p>
           <h3 id="levita-promo-title" class="lv-title">
-            Conheça o aplicativo <span class="lv-brand">Levita</span>
+            Sua vida financeira a dois, <span class="lv-brand">sem complicação</span>
           </h3>
           <p class="lv-tagline">
-            Finanças da família, sem complicação — contas compartilhadas, categorias e relatórios no mesmo lugar.
+            Lance despesas, acompanhe relatórios e tenha clareza de onde vai o seu dinheiro todos os meses.
           </p>
 
           <div class="lv-actions">
@@ -20,7 +20,7 @@
               rel="noopener noreferrer"
               class="lv-btn lv-btn--primary"
             >
-              Conhecer o Levita
+              Começar a usar agora
               <svg class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
